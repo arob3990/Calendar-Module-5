@@ -7,6 +7,10 @@ $('#currentDay').text("Today is "+currentDay);
 var currentTime = dayjs().format('hh:mm:A')
 $('#currentTime').text("The current time is: "+ currentTime);
 var saveButton = $(".btn")
+var textInput = $(".textarea")
+var sixClock = $("#hour-6")
+
+console.log(sixClock.find("textarea"))
 
 
 saveButton.on('click',function(){
@@ -15,13 +19,14 @@ saveButton.on('click',function(){
   
   var eventTime = $(this).parent().attr('id');
   console.log("The event id is " + eventTime);
-  var appointment = {
-    time: eventTime,
-    subject: eventDescription
-  }
+  // var appointment = {
+  //   time: eventTime,
+  //   subject: eventDescription
+  // }
   
+localStorage.setItem(eventTime,eventDescription,)
 
-  localStorage.setItem("appointment",JSON.stringify(appointment));
+// localStorage.setItem("appointment",JSON.stringify(appointment));
 })
   // TODO: Add a listener for click events on the save button. This code should
   // use the id in the containing time-block as a key to save the user input in
@@ -39,6 +44,18 @@ saveButton.on('click',function(){
   // TODO: Add code to get any user input that was saved in localStorage and set
   // the values of the corresponding textarea elements. HINT: How can the id
   // attribute of each time-block be used to do this?
+
+
+window.onload = function loadPrevious(){
+  console.log(localStorage.getItem("hour-6"));
+  console.log(localStorage.getItem("hour-7"));
+  $(".description").value = localStorage.getItem("hour-6");
+  // $("#hour-6.textarea").find(".description").innerHTML = localStorage.getItem("hour-6")
+  console.log("HELLO");
+  console.log( $("#hour-6.textarea").find(".description").val());
+}
+
+
   //
   // TODO: Add code to display the current date in the header of the page.
 
