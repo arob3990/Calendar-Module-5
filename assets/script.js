@@ -32,7 +32,23 @@ console.log(currentHour)
   // Code below applies the past, present, or future class to each time
   // block based off of the current hour
 
-if(parseInt(currentHour) === 6) {
+  if(parseInt(currentHour) < 6){
+    $("#hour-6").addClass("future")
+    $("#hour-7").addClass("future")
+    $("#hour-8").addClass("future")
+    $("#hour-9").addClass("future")
+    $("#hour-10").addClass("future")
+    $("#hour-11").addClass("future")
+    $("#hour-12").addClass("future")
+    $("#hour-13").addClass("future")
+    $("#hour-14").addClass("future")
+    $("#hour-15").addClass("future")
+    $("#hour-16").addClass("future")
+    $("#hour-17").addClass("future")
+    $("#hour-18").addClass("future")
+  }
+
+  if(parseInt(currentHour) === 6) {
     $("#hour-6").addClass("present")
     $("#hour-7").addClass("future")
     $("#hour-8").addClass("future")
@@ -226,6 +242,22 @@ if(parseInt(currentHour) === 6) {
     $("#hour-16").addClass("past")
     $("#hour-17").addClass("past")
     $("#hour-18").addClass("present")
+  }
+
+  if(parseInt(currentHour) > 18){
+    $("#hour-6").addClass("past")
+    $("#hour-7").addClass("past")
+    $("#hour-8").addClass("past")
+    $("#hour-9").addClass("past")
+    $("#hour-10").addClass("past")
+    $("#hour-11").addClass("past")
+    $("#hour-12").addClass("past")
+    $("#hour-13").addClass("past")
+    $("#hour-14").addClass("past")
+    $("#hour-15").addClass("past")
+    $("#hour-16").addClass("past")
+    $("#hour-17").addClass("past")
+    $("#hour-18").addClass("past")
   }
 
 
