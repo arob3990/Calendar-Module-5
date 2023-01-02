@@ -1,6 +1,6 @@
 # Calendar-Module-5
 Calendar Application for Bootcamp Module 5 Homework
-[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)]
+[![License: FDL 1.3](https://img.shields.io/badge/License-FDL_v1.3-blue.svg)]
 
 ## Description
 This webpage allows a user to plan their day utilizing the hour blocks in on the webpage. Each hour block allows for user inputs into the text area and then the user can save them to their local storage by clicking the save button.
